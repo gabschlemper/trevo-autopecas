@@ -1,9 +1,9 @@
-import Image from "next/image";
+import Slider from "./components/Slider";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-2">
-      Hello World
+    <main>
+      <Slider />
     </main>
   );
 }

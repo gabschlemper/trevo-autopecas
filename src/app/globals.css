@@ -5,4 +5,13 @@
 body {
   color: theme(colors.terciary);
   background: theme("colors.secondary");
+  font-family: var(--font-roboto);
+}
+
+a {
+  cursor: pointer;
+  &:hover {
+    opacity: 0.75;
+    transition: all;
+  }
 }
