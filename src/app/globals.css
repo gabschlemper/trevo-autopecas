@@ -15,3 +15,12 @@ a {
     transition: all;
   }
 }
+
+h1,
+h2 {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+  font-family: var(--font-anton);
+  text-transform: uppercase;
+}

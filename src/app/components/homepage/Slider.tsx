@@ -1,8 +1,9 @@
 "use client";
 import { useEffect, useState } from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
-import Header from "./Header";
+import Header from "../Header";
 import Image from "next/image";
+import Button from "../Button";
 
 const slides = [
   {
@@ -41,13 +42,11 @@ export default function Slider() {
   };
 
   return (
-    <div className="h-screen w-full m-auto relative group">
+    <section className="h-screen w-screen m-auto relative group snap-start shrink-0">
       <div
         style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
         className="w-full h-full bg-center bg-cover duration-500 ease-in-out flex flex-col"
       >
-        <Header />
-
         <div className="block md:group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
           <BsChevronCompactLeft onClick={prevSlide} size={16} />
         </div>
@@ -55,9 +54,9 @@ export default function Slider() {
           <BsChevronCompactRight onClick={nextSlide} size={16} />
         </div>
 
-        <div className="w-full flex items-center h-full justify-center flex-col">
-          <h1 className="text-3xl md:text-5xl max-w-sm md:max-w-2xl uppercase font-anton text-center">
-            <span className="text-primary">
+        <div className="w-full flex items-center h-full justify-center flex-col px-8">
+          <h1 className="text-3xl md:text-5xl max-w-sm md:max-w-2xl font-anton text-center">
+            <span className="text-primary-100">
               {slides[currentIndex].content?.[0]}
             </span>{" "}
             {slides[currentIndex].content?.slice(1)}
@@ -72,15 +71,15 @@ export default function Slider() {
             />
           ) : null}
           {slides[currentIndex].description ? (
-            <p className="font-anton mt-10 max-w-sm md:max-w-md text-center">
+            <p className="font-anton mt-6 text-gray-100 max-w-sm md:max-w-md text-center">
               {slides[currentIndex].description}
             </p>
           ) : null}
-          <button className="rounded-5 border-2 rounded-3xl border-white py-2 px-5 uppercase mt-12 hover:shadow-lg hover:scale-110 transition-all font-bold">
+          <Button className="border-2 border-white text-white mt-12">
             Entre em contato
-          </button>
+          </Button>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

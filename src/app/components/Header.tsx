@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -11,9 +12,10 @@ export default function Header() {
   function handleisMenuOpen() {
     setIsMenuOpen(!isMenuOpen);
   }
+
   return (
     <>
-      <header className="flex justify-between items-center py-4 px-8 font-bold shadow-md">
+      <header className="flex justify-between items-center py-4 px-8 font-bold shadow-md z-50 absolute top-0 w-full backdrop-blur-md">
         <Image
           src="/logo.svg"
           width={60}
@@ -23,7 +25,7 @@ export default function Header() {
         />
 
         <nav className="hidden md:flex gap-4 pt-0 flex-row uppercase">
-          <Link href="/">Sobre nós</Link>
+          <Link href="#aboutus">Sobre nós</Link>
           <Link href="/">Serviços</Link>
           <Link href="/">Nossa equipe</Link>
           <Link href="/">Contato</Link>
@@ -52,9 +54,13 @@ export default function Header() {
         </div>
       </header>
 
-      <nav className={`md:hidden font-bold ${isMenuOpen ? "flex z-10 opacity-95" : "hidden"}`}>
-        <ul className="flex flex-col absolute left-0 top-0 pt-20 px-9 gap-6 w-full h-full bg-secondary uppercase">
-          <Link href="/">Sobre nós</Link>
+      <nav
+        className={`md:hidden font-bold absolute left-0 h-full w-full ${
+          isMenuOpen ? "flex z-10 opacity-100" : "hidden"
+        }`}
+      >
+        <ul className="flex flex-col pt-12 px-9 gap-6 w-full h-full bg-secondary uppercase">
+          <Link href="#aboutus">Sobre nós</Link>
           <Link href="/">Serviços</Link>
           <Link href="/">Nossa equipe</Link>
           <Link href="/">Contato</Link>

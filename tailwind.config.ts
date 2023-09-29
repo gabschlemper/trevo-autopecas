@@ -10,9 +10,17 @@ const config: Config = {
     colors: {
       white: "#fff",
       black: "#000",
-      primary: "#F05022",
+      gray: {
+        100: "#CDCDCD",
+        200: "#E9E9E9",
+      },
+      primary: {
+        100: "#F05022",
+        200: "#8A361D",
+      },
       secondary: "#1B1A1A",
       terciary: "#F1F6FA",
+      transparent: "#RGBA",
     },
     extend: {
       fontFamily: {

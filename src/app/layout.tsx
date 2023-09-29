@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${roboto.variable} ${anton.variable} font-sans`}
+      className={`${roboto.variable} ${anton.variable} font-sans snap-y	`}
     >
       <body>{children}</body>
     </html>
