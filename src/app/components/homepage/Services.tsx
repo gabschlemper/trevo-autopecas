@@ -24,7 +24,7 @@ export default function Services() {
             return (
               <div
                 key={item.title}
-                className="flex flex-col md:flex-row bg-black bg-opacity-95 sticky top-40 md:top-[35%] bg-scroll md:rounded-3xl min-h-[300px] shadow-2xl"
+                className="flex flex-col md:flex-row bg-black bg-opacity-95 sticky top-20 md:top-[35%] bg-scroll md:rounded-3xl min-h-[300px] shadow-2xl"
               >
                 <div className="hidden md:flex overflow-hidden rounded-3xl">
                   <Image
@@ -41,7 +41,7 @@ export default function Services() {
 
                 <div className="flex flex-col md:flex-row items-center flex-1 md:border-0 rounded-lg min-h-[350px] md:min-h-fit ">
                   <div className="px-5 py-8 flex flex-col gap-6 text-center">
-                    <h1 className="text-gray-200">{item.title}</h1>
+                    <h1 className="text-white">{item.title}</h1>
                     <p className="text-gray-100">{item.description}</p>
                   </div>
                 </div>
