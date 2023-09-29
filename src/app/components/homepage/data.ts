@@ -28,7 +28,7 @@ export const serviceData = [
   },
   {
     image: "/alinhamento-thumbnail.png",
-    title: "Alinhamento de Rodas: O Segredo para uma Direção Precisa e Segur",
+    title: "Alinhamento de Rodas: O Segredo para uma Direção Precisa e Segura",
     description:
       "O alinhamento de rodas é crucial para manter a estabilidade, economia de combustível e desgaste uniforme dos pneus. Conte com a Trevo Autopeças para garantir um alinhamento preciso e seguro.",
   },

@@ -8,7 +8,7 @@ export default function Services() {
       className="w-full md:py-24 px-8 relative bg-scroll bg-gradient-to-b from-black to-secondary"
     >
       <div className="flex flex-col gap-6 mb-10 w-full relative h-full bg-scroll md:justify-center items-center">
-        <div className="flex flex-col md:align-start justify-center py-20 gap-6 md:gap-10 md:items-start sticky top-10 ">
+        <div className="flex flex-col md:align-start justify-center py-20 gap-6 md:gap-10 md:items-start md:sticky static top-10 ">
           <h2 className="text-5xl md:text-5xl text-secondary text-opacity-0 bg-clip-text bg-gradient-to-r from-primary-100 to-primary-200 ">
             Nossos Serviços
           </h2>
@@ -24,7 +24,7 @@ export default function Services() {
             return (
               <div
                 key={item.title}
-                className="flex flex-col md:flex-row bg-black bg-opacity-95 sticky top-80 md:top-[35%] bg-scroll rounded-3xl min-h-[300px] shadow-2xl"
+                className="flex flex-col md:flex-row bg-black bg-opacity-95 sticky top-40 md:top-[35%] bg-scroll md:rounded-3xl min-h-[300px] shadow-2xl"
               >
                 <div className="hidden md:flex overflow-hidden rounded-3xl">
                   <Image
@@ -34,7 +34,8 @@ export default function Services() {
                     alt={item.title}
                   />
                 </div>
-                <div className="block md:hidden overflow-hidden rounded-3xl w-full h-10 object-contain opacity-30">
+
+                <div className="block md:hidden h-10 opacity-30">
                   <Image src={item.image} fill alt={item.title} />
                 </div>
 
