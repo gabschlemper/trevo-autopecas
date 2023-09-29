@@ -5,7 +5,7 @@ export default function Services() {
   return (
     <section
       id="aboutus"
-      className="w-full md:py-24 px-8 relative bg-scroll bg-gradient-to-b from-black to-secondary"
+      className="w-full md:py-24 px-4 md:-px-8 relative bg-scroll bg-gradient-to-b from-black to-secondary"
     >
       <div className="flex flex-col gap-6 mb-10 w-full relative h-full bg-scroll md:justify-center items-center">
         <div className="flex flex-col md:align-start justify-center py-20 gap-6 md:gap-10 md:items-start md:sticky static top-10 ">
@@ -24,7 +24,7 @@ export default function Services() {
             return (
               <div
                 key={item.title}
-                className="flex flex-col md:flex-row bg-black bg-opacity-95 sticky top-20 md:top-[35%] bg-scroll md:rounded-3xl min-h-[300px] shadow-2xl"
+                className="flex flex-col md:flex-row bg-black bg-opacity-95 sticky top-20 md:top-[35%] bg-scroll md:rounded-3xl min-h-[450px] shadow-2xl"
               >
                 <div className="hidden md:flex overflow-hidden rounded-3xl">
                   <Image

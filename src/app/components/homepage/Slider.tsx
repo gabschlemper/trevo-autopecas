@@ -42,7 +42,7 @@ export default function Slider() {
   };
 
   return (
-    <section className="h-screen w-screen m-auto relative group snap-start shrink-0">
+    <section className="h-screen w-screen m-auto relative group">
       <div
         style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
         className="w-full h-full bg-center bg-cover duration-500 ease-in-out flex flex-col"
@@ -54,7 +54,7 @@ export default function Slider() {
           <BsChevronCompactRight onClick={nextSlide} size={16} />
         </div>
 
-        <div className="w-full flex items-center h-full justify-center flex-col px-8">
+        <div className="w-full flex items-center h-full justify-center flex-col px-4 md:px-8">
           <h1 className="text-3xl md:text-5xl max-w-sm md:max-w-2xl font-anton text-center">
             <span className="text-primary-100">
               {slides[currentIndex].content?.[0]}

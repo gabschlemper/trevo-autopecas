@@ -10,7 +10,7 @@ export const serviceData = [
     title: "Pneus: Renove a Segurança e o Desempenho do Seu Veículo.",
 
     description:
-      "A troca regular de pneus é vital para a segurança nas estradas. Pneus desgastados reduzem a aderência, aumentando o risco de acidentes. Além disso, pneus novos melhoram o consumo de combustível e o desempenho do veículo, economizando dinheiro a longo prazo. Mantenha-se seguro e eficiente, trocando seus pneus quando necessário.",
+      "A troca regular de pneus é vital para a segurança nas estradas. Pneus desgastados reduzem a aderência, aumentando o risco de acidentes. Além disso, pneus novos melhoram o consumo de combustível e o desempenho do veículo, economizando dinheiro a longo prazo.",
   },
   {
     image: "/oleo-thumbnail.png",
