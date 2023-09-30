@@ -10,7 +10,7 @@ export default function Home() {
       <Header />
       <Slider />
       <Services />
-      <AboutUs />
+      {/* <AboutUs /> */}
       <Feedback />
     </main>
   );

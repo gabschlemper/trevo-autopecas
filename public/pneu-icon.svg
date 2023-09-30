@@ -1,0 +1,11 @@
+<svg width="800" height="800" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M400 466.667C436.819 466.667 466.666 436.819 466.666 400C466.666 363.181 436.819 333.333 400 333.333C363.181 333.333 333.333 363.181 333.333 400C333.333 436.819 363.181 466.667 400 466.667Z" stroke="white" stroke-width="50"/>
+<path d="M200 400H333.333" stroke="white" stroke-width="50" stroke-linecap="round"/>
+<path d="M466.667 400H600" stroke="white" stroke-width="50" stroke-linecap="round"/>
+<path d="M300 573.21L366.667 457.74" stroke="white" stroke-width="50" stroke-linecap="round"/>
+<path d="M433.333 342.27L500 226.799" stroke="white" stroke-width="50" stroke-linecap="round"/>
+<path d="M500 573.21L433.333 457.74" stroke="white" stroke-width="50" stroke-linecap="round"/>
+<path d="M366.667 342.27L300 226.799" stroke="white" stroke-width="50" stroke-linecap="round"/>
+<path d="M233.334 111.261C282.363 82.899 339.287 66.6667 400 66.6667C584.094 66.6667 733.334 215.905 733.334 400C733.334 584.093 584.094 733.333 400 733.333C215.905 733.333 66.667 584.093 66.667 400C66.667 339.287 82.8993 282.362 111.261 233.333" stroke="white" stroke-width="50" stroke-linecap="round"/>
+<path d="M500 573.243C470.583 590.26 436.43 600 400 600C289.543 600 200 510.457 200 400C200 289.543 289.543 200 400 200C510.457 200 600 289.543 600 400C600 436.43 590.26 470.583 573.243 500" stroke="white" stroke-width="50" stroke-linecap="round"/>
+</svg>

@@ -20,7 +20,10 @@ const config: Config = {
       },
       secondary: "#1B1A1A",
       terciary: "#F1F6FA",
-      transparent: "#RGBA",
+      blue: "#0088D1",
+      green: "#33691D",
+      purple: "#7D57C2",
+      
     },
     extend: {
       fontFamily: {

@@ -59,7 +59,7 @@ export default function Header() {
           isMenuOpen ? "flex z-10 opacity-100" : "hidden"
         }`}
       >
-        <ul className="flex flex-col pt-12 px-9 gap-6 w-full h-full bg-secondary uppercase">
+        <ul className="flex flex-col pt-32 px-9 gap-6 w-full h-full bg-secondary uppercase">
           <Link href="#aboutus">Sobre nós</Link>
           <Link href="/">Serviços</Link>
           <Link href="/">Nossa equipe</Link>

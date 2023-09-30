@@ -55,10 +55,7 @@ export default function AboutUs() {
     "text-xs text-primary-100 opacity-60 pl-3 absolute right-10 top-3";
 
   return (
-    <section
-      id="aboutus"
-      className="w-full py-24 px-8 bg-gradient-to-t from-black to-secondary"
-    >
+    <section id="aboutus" className="w-full py-24 px-8">
       <div className="flex flex-col md:flex-row justify-between gap-10 bg-black bg-opacity-20	rounded-lg items-center ">
         <div className="w-full p-8">
           <h1 className="text-grey mb-8">

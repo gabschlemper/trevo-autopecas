@@ -5,11 +5,11 @@ export default function Services() {
   return (
     <section
       id="aboutus"
-      className="w-full md:py-24 px-4 md:-px-8 relative bg-scroll bg-gradient-to-b from-black to-secondary"
+      className="w-full md:py-24 px-4 md:px-8 relative bg-scroll bg-gradient-to-b from-black to-secondary"
     >
-      <div className="flex flex-col gap-6 mb-10 w-full relative h-full bg-scroll md:justify-center items-center">
-        <div className="flex flex-col md:align-start justify-center py-20 gap-6 md:gap-10 md:items-start md:sticky static top-10 ">
-          <h2 className="text-5xl md:text-5xl text-secondary text-opacity-0 bg-clip-text bg-gradient-to-r from-primary-100 to-primary-200 ">
+      <div className="flex flex-col md:flex-row gap-12 mb-10 w-full relative h-full bg-scroll md:justify-center items-start">
+        <div className="flex flex-col md:align-start justify-center py-20 gap-6 md:gap-15 md:items-start md:sticky static top-20 ">
+          <h2 className="text-4xl md:text-5xl text-primary-100">
             Nossos Serviços
           </h2>
           <p className="max-w-md text-gray-200 ">
@@ -19,29 +19,31 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="flex flex-col max-w-5xl gap-10">
+        <div className="flex flex-col max-w-5xl gap-20">
           {serviceData.map((item) => {
             return (
               <div
                 key={item.title}
-                className="flex flex-col md:flex-row bg-black bg-opacity-95 sticky top-20 md:top-[35%] bg-scroll md:rounded-3xl min-h-[450px] shadow-2xl"
+                className="flex flex-col md:flex-row bg-black bg-opacity-95 sticky top-20 md:top-[15%] bg-scroll md:rounded-3xl min-h-[350px] md:min-h-min shadow-2xl md:items-center"
               >
-                <div className="hidden md:flex overflow-hidden rounded-3xl">
+                <div className="hidden md:block pl-4">
                   <Image
-                    src={item.image}
-                    height={100}
-                    width={250}
+                    src={item.icon}
+                    width={30}
+                    height={30}
                     alt={item.title}
                   />
                 </div>
 
-                <div className="block md:hidden h-10 opacity-30">
+                <div className="block md:hidden h-10 opacity-40">
                   <Image src={item.image} fill alt={item.title} />
                 </div>
 
-                <div className="flex flex-col md:flex-row items-center flex-1 md:border-0 rounded-lg min-h-[350px] md:min-h-fit ">
-                  <div className="px-5 py-8 flex flex-col gap-6 text-center">
-                    <h1 className="text-white">{item.title}</h1>
+                <div className="flex flex-col md:flex-row items-center md:border-0 rounded-lg">
+                  <div className="px-5 py-8 flex flex-col gap-6">
+                    <h3 className="font-anton font-bold text-xl text-terciary">
+                      {item.title}
+                    </h3>
                     <p className="text-gray-100">{item.description}</p>
                   </div>
                 </div>
