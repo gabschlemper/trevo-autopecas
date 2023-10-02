@@ -23,12 +23,20 @@ const config: Config = {
       blue: "#0088D1",
       green: "#33691D",
       purple: "#7D57C2",
-      
     },
     extend: {
       fontFamily: {
         anton: ["var(--font-anton)"],
         roboto: ["var(--font-roboto)"],
+      },
+      animation: {
+        "infinite-scroll": "infinite-scroll 25s linear infinite",
+      },
+      keyframes: {
+        "infinite-scroll": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-100%)" },
+        },
       },
     },
   },

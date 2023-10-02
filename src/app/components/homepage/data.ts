@@ -1,5 +1,3 @@
-import { GiTrefoilShuriken } from "react-icons/gi";
-
 export const serviceData = [
   {
     icon: "/mecanica-icon.svg",
@@ -43,4 +41,62 @@ export const serviceData = [
     description:
       "Fornecemos peças automotivas de alta qualidade para garantir o desempenho e a confiabilidade do seu veículo. Conte conosco para peças excepcionais.",
   },
+];
+
+export const feedbackData = [
+  [
+    {
+      name: "Tamires Santos",
+      source: "Google",
+      description: "Atendimento muito bom, e rapidez também muito prestativos.",
+    },
+    {
+      name: "Dilcinho Luiz da Silva Luiz.",
+      source: "Google",
+      description:
+        "Excelente Prestação de Serviço com garantia de qualidade! Todos os detalhes dos serviços realizados são esclarecidos pela equipe! Obrigado pelo bom atendimento!",
+    },
+  ],
+  [
+    {
+      name: "Joel Nascimento",
+      source: "Google",
+      description:
+        "Ótimo, pois estava em viagem, e tive minhas espectativas superadas, valeu todos estão de parabéns principalmente o atendimento perfeito...",
+    },
+    {
+      name: "Ester Leigue",
+      source: "Google",
+      description:
+        "Obrigado centro automotivo trevo por nós atenderem tão bem a loja e linda a educação perfeita. 😀",
+    },
+  ],
+  [
+    {
+      name: "Josilene Diogo Almeida",
+      source: "Google",
+      description:
+        "A empresa tem profissionais excelentes, a loja impecável e o atendimento supera as expectativas. Recomendo sempre.",
+    },
+    {
+      name: "Stefany Kely",
+      source: "Google",
+      description:
+        "Excelente atendimento, o cuidado que vocês tem com o carro é diferenciado a educação dos mecânicos amei recomendo",
+    },
+  ],
+  [
+    {
+      name: "NR Contador",
+      source: "Google",
+      description:
+        "Me salvaram na estrada!!! Amém, Recomendo eles, pra quem estiver na BR 381.",
+    },
+    {
+      name: "Jair Martins",
+      source: "Google",
+      description:
+        "Ótimo, satisfeito, ótimo atendimento, mecânico excelente, parabéns",
+    },
+  ],
 ];

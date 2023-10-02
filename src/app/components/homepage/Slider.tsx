@@ -29,6 +29,14 @@ const slides = [
 export default function Slider() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentIndex((prevImage) => (prevImage + 1) % slides.length);
+    }, 3000);
+
+    return () => clearInterval(intervalId);
+  }, [slides, 3000]);
+
   const prevSlide = () => {
     const isFirstSlide = currentIndex === 0;
     const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
