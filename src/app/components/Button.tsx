@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 
 type buttonProps = {
   children: ReactNode;
-  className?: string,
+  className?: string;
   type?: "button" | "submit" | "reset";
 };
 

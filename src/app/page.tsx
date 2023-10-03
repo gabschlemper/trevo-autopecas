@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Header from "./components/Header";
 import AboutUs from "./components/homepage/AboutUs";
 import { Differential } from "./components/homepage/Differential";
@@ -11,7 +12,7 @@ export default function Home() {
       <Header />
       <Slider />
       <Services />
-      {/* <AboutUs /> */}
+      <AboutUs />
       <Feedback />
       <Differential />
     </main>

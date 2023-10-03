@@ -1,184 +1,64 @@
 "use client";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
-import { Controller, SubmitHandler, useForm } from "react-hook-form";
-import { z } from "zod";
-import { zodResolver } from "@hookform/resolvers/zod";
+import { BsFillArrowRightCircleFill } from "react-icons/bs";
 import Button from "../Button";
-
-const userSchema = z.object({
-  name: z
-    .string()
-    .min(1, { message: "É necessário inserir um nome válido." })
-    .max(100),
-  email: z.string().email({ message: "Por favor, inserir um email." }),
-  phone: z
-    .string()
-    .min(1, { message: "O número de celular é obrigatório" })
-    .max(15, {
-      message: "O número de telefone deve ter no máximo 15 caracteres.",
-    }),
-  message: z
-    .string()
-    .min(5, { message: "Mínimo 5 caracteres." })
-    .max(100, { message: "Sua mensagem deve ter no máximo 100 caracteres" }),
-});
-
-type Inputs = {
-  name: string;
-  email: string;
-  phone: string;
-  message: string;
-};
+import Image from "next/image";
 
 export default function AboutUs() {
-  const {
-    register,
-    control,
-    handleSubmit,
-    formState: { errors, isSubmitting },
-    watch,
-  } = useForm<Inputs>({
-    defaultValues: {
-      name: "",
-      email: "",
-      phone: "",
-      message: "",
-    },
-    resolver: zodResolver(userSchema),
-  });
-
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
-
-  const inputBase =
-    "bg-black rounded-xl h-10 bg-opacity-40 px-4 focus:outline-none focus:ring-1 focus:ring-gray";
-  const errorMessageBase =
-    "text-xs text-primary-100 opacity-60 pl-3 absolute right-10 top-3";
-
   return (
-    <section id="aboutus" className="w-full py-24 px-8">
-      <div className="flex flex-col md:flex-row justify-between gap-10 bg-black bg-opacity-20	rounded-lg items-center ">
-        <div className="w-full p-8">
-          <h1 className="text-grey mb-8">
-            Faça seu <span className="text-grey">orçamento</span>
-          </h1>
+    <section className="py-24 px-8 flex flex-col items-center gap-20">
+      <div id="aboutus" className="max-w-7xl">
+        <div className="flex flex-col items-center md:flex-row justify-between gap-10 md:gap-16 bg-black bg-opacity-20 rounded-lg p-8">
+          <div className="w-full">
+            <h2 className="text-grey mb-2 text-4xl md:text-5xl">Sobre nós</h2>
+            <span className="flex w-14 h-1 bg-primary-100 mb-8" />
+            <p>A melhor reparação de automóveis e serviços de manutenção.</p>
+            <Button className="bg-primary-100 text-terciary flex items-center gap-2 mt-3">
+              Contato <BsFillArrowRightCircleFill size={26} />
+            </Button>
+          </div>
 
-          <form
-            action=""
-            className="flex flex-col gap-2"
-            onSubmit={handleSubmit(onSubmit)}
-          >
-            <div className="flex flex-col gap-1 relative">
-              <Controller
-                name="name"
-                control={control}
-                render={() => (
-                  <>
-                    <input
-                      type="text"
-                      className={inputBase}
-                      placeholder="Nome"
-                      disabled={isSubmitting}
-                      {...register("name")}
-                    />
-                    {errors.name && (
-                      <p className={errorMessageBase}>{errors.name.message}</p>
-                    )}
-                  </>
-                )}
-              />
-            </div>
-
-            <div className="flex flex-col gap-1 relative">
-              <Controller
-                name="name"
-                control={control}
-                render={() => (
-                  <>
-                    <input
-                      type="number"
-                      className={inputBase}
-                      placeholder="Telefone"
-                      disabled={isSubmitting}
-                      {...register("phone")}
-                    />
-                    {errors.phone && (
-                      <p className={errorMessageBase}>{errors.phone.message}</p>
-                    )}
-                  </>
-                )}
-              />
-            </div>
-
-            <div className="flex flex-col gap-1 relative">
-              <Controller
-                name="name"
-                control={control}
-                render={() => (
-                  <>
-                    <input
-                      type="text"
-                      className={inputBase}
-                      placeholder="Email"
-                      disabled={isSubmitting}
-                      {...register("email")}
-                    />
-                    {errors.email && (
-                      <p className={errorMessageBase}>{errors.email.message}</p>
-                    )}
-                  </>
-                )}
-              />
-            </div>
-
-            <div className="flex flex-col gap-1 relative">
-              <Controller
-                name="name"
-                control={control}
-                render={() => (
-                  <>
-                    <textarea
-                      className={`${inputBase} resize-y pt-4 h-24`}
-                      placeholder="Deixe sua mensagem"
-                      disabled={isSubmitting}
-                      {...register("message")}
-                    />
-                    {errors.message && (
-                      <p className={errorMessageBase}>
-                        {errors.message.message}
-                      </p>
-                    )}
-                  </>
-                )}
-              />
-            </div>
-
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className="text-primary-100 border-2 border-primary-100 rounded-3xl py-2 px-5 uppercase hover:shadow-lg hover:scale-105 transition-all font-bold"
-            >
-              Entre em contato
-            </button>
-          </form>
-        </div>
-
-        <div className="p-8">
-          <h1 className="text-grey mb-8">Quem somos nós?</h1>
-          <p>
-            Na TREVO Autopeças, estamos aqui para atender às suas necessidades
-            automotivas. Somos a sua fonte confiável para autopeças de alta
-            qualidade e acessórios para veículos. Nossa equipe experiente e
-            preços competitivos tornam a manutenção e a personalização do seu
-            veículo simples e acessíveis. Venha nos visitar hoje e descubra como
-            podemos ajudar a manter o seu carro em ótimo estado.
+          <p className="text-md text-terciary">
+            Somos a{" "}
+            <strong className="uppercase">trevo centro automotivo</strong>, uma
+            empresa especializada no fornecimento de peças automotivas de alta
+            qualidade e soluções confiáveis para atender todas as necessidades
+            dos proprietários de veículos. Com uma história sólida e um{" "}
+            <strong className="uppercase">
+              compromisso inabalável com a excelência
+            </strong>
+            , estamos aqui para oferecer o melhor em produtos e serviços para o
+            setor automobilístico. Nossa missão é simplificar a vida dos
+            motoristas, proporcionando acesso fácil a peças automotivas de alta
+            qualidade a preços competitivos.
           </p>
-          <Button className="bg-primary-100 mt-8">
-            <MdOutlineArrowForwardIos />
-          </Button>
         </div>
       </div>
 
-      {/* <pre>{JSON.stringify(watch(), null, 2)}</pre> */}
+      <div className="flex items-center gap-20">
+        <div className="max-w-3xl shadow-2xl bg-secondary flex flex-col gap-6 justify-center p-16 rounded-md">
+          <h1 className="text-grey text-4xl md:text-5xl text-primary-100 ">
+            Nossa missão
+          </h1>
+          <p>
+            Nosso propósito é ser a principal escolha de nossos clientes quando
+            se trata de suas necessidades de autopeças e acessórios automotivos.
+            Estamos comprometidos em fornecer produtos de alta qualidade e
+            serviços excepcionais que ajudem a manter os veículos de nossos
+            clientes seguros, confiáveis e em perfeitas condições de
+            funcionamento. Trabalhamos incansavelmente para atender às
+            expectativas de nossos clientes, construir relacionamentos
+            duradouros e contribuir para a mobilidade segura e eficiente.
+          </p>
+        </div>
+        <Image
+          src="/wheel.svg"
+          width={300}
+          height={100}
+          alt="pneu"
+          className="animate-spin"
+        />
+      </div>
     </section>
   );
 }
