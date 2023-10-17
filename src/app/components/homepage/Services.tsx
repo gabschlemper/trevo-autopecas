@@ -5,7 +5,7 @@ export default function Services() {
   return (
     <section
       id="aboutus"
-      className="w-full md:py-24 px-4 md:px-8 relative bg-scroll bg-gradient-to-b from-black to-secondary"
+      className="w-full md:py-24 px-4 md:px-8 relative bg-scroll bg-secondary"
     >
       <div className="flex flex-col md:flex-row gap-12 mb-10 w-full relative h-full bg-scroll md:justify-center items-start">
         <div className="flex flex-col md:align-start justify-center py-20 gap-6 md:gap-15 md:items-start md:sticky static top-20 ">
@@ -29,8 +29,8 @@ export default function Services() {
                 <div className="hidden md:block pl-4">
                   <Image
                     src={item.icon}
-                    width={30}
-                    height={30}
+                    width={50}
+                    height={50}
                     alt={item.title}
                   />
                 </div>
@@ -41,9 +41,11 @@ export default function Services() {
 
                 <div className="flex flex-col md:flex-row items-center md:border-0 rounded-lg">
                   <div className="px-5 py-8 flex flex-col gap-6">
-                    <h3 className="font-anton font-bold text-xl text-terciary">
-                      {item.title}
-                    </h3>
+                    <div>
+                      <h3 className="font-anton font-bold text-xl">
+                        {item.title}
+                      </h3>
+                    </div>
                     <p className="text-gray-100">{item.description}</p>
                   </div>
                 </div>
