@@ -14,7 +14,7 @@ export default function Hero() {
           <p className="font-anton mt-8 text-center text-2xl">
             A melhor reparação de automóveis e serviço de manutenção.
           </p>
-          <Button className="bg-primary-100 text-white mt-20 flex items-center gap-2 py-2 px-5 ">
+          <Button className="bg-primary-100 text-white mt-20 flex items-center gap-2 py-2 px-5">
             contato
             <BsFillArrowRightCircleFill size={24} />
           </Button>

@@ -100,3 +100,63 @@ export const feedbackData = [
     },
   ],
 ];
+
+export const missionData = [
+  {
+    title: "Missão",
+    description:
+      "A visão do Centro Automotivo Trevo é ser líder no setor automotivo, oferecendo serviços inovadores e de alta qualidade. Projetamos um futuro onde nossa marca seja sinônimo de excelência, destacando-se em tecnologia, sustentabilidade e satisfação do cliente. Comprometemo-nos a manter nossa posição de vanguarda, adaptando-nos às mudanças do setor e superando as expectativas dos clientes, tornando-nos a escolha número um para todas as necessidades automotivas.",
+  },
+  {
+    title: "Visão",
+    description:
+      "A visão do Centro Automotivo Trevo é ser líder no setor automotivo, oferecendo serviços inovadores e de alta qualidade. Projetamos um futuro onde nossa marca seja sinônimo de excelência, destacando-se em tecnologia, sustentabilidade e satisfação do cliente. Comprometemo-nos a manter nossa posição de vanguarda, adaptando-nos às mudanças do setor e superando as expectativas dos clientes, tornando-nos a escolha número um para todas as necessidades automotivas",
+  },
+  {
+    title: "Valores",
+    description:
+      "Nossos valores fundamentais são Integridade, Qualidade e Satisfação do Cliente. A Integridade guia nossas ações, priorizando a honestidade e a ética. A Qualidade é nossa marca registrada, garantindo serviços de alto padrão. A Satisfação do Cliente é nossa prioridade máxima, buscando superar expectativas e construir relacionamentos duradouros.",
+  },
+];
+
+export const differencialData = [
+  {
+    title: "Produtos de qualidade superior",
+    icon: "/differential/check.svg",
+  },
+  {
+    title: "Preços competitivos",
+    icon: "/differential/price.svg",
+  },
+  {
+    title: "Experiência e conhecimento técnico",
+    icon: "/differential/equipe.svg",
+  },
+  {
+    title: "Serviços especiais",
+    icon: "/differential/qualidade.svg",
+  },
+  {
+    title: "Atendimento personalizado",
+    icon: "/differential/atendimento.svg",
+  },
+  {
+    title: "Variedade de peças e acessórios",
+    icon: "/differential/check.svg",
+  },
+];
+
+export const carouselBrands = [
+  { icon: "/brands/hyundai.svg" },
+  { icon: "/brands/chery.svg" },
+  { icon: "/brands/volkswagen.svg" },
+  { icon: "/brands/renault.svg" },
+  { icon: "/brands/honda.svg" },
+  { icon: "/brands/peugeot.svg" },
+  { icon: "/brands/toyota.svg" },
+  { icon: "/brands/nissan.svg" },
+  { icon: "/brands/fiat.svg" },
+  { icon: "/brands/citroen.svg" },
+  { icon: "/brands/ford.svg" },
+  { icon: "/brands/chevrolet.svg" },
+];

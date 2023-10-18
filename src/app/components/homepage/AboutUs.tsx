@@ -5,8 +5,7 @@ import {
   BsFillArrowRightCircleFill,
 } from "react-icons/bs";
 import Button from "../Button";
-import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const slides = [
   {

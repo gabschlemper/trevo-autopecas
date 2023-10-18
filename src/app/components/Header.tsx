@@ -15,7 +15,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="flex justify-between items-center py-4 px-4 md:px-8 font-bold shadow-md z-50 absolute top-0 w-full backdrop-blur-md">
+      <header className="flex justify-between items-center py-4 px-4 md:px-8 font-bold shadow-md z-50 absolute top-0 w-full bg-secondary">
         <Image
           src="/logo.svg"
           width={60}
