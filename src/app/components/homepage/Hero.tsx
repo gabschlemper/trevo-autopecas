@@ -2,10 +2,10 @@ import Button from "../Button";
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
 export default function Hero() {
   return (
-    <section className="h-screen w-screen m-auto relative group">
+    <section className="h-screen m-auto relative group md:mx-8">
       <div
-        style={{ backgroundImage: "url(/bg-home.png)" }}
-        className="w-full h-full bg-center bg-cover duration-500 ease-in-out flex flex-col"
+        style={{ backgroundImage: "url(/bg-home.png)", borderRadius: "20px" }}
+        className="w-full h-full bg-center bg-cover duration-500 ease-in-out flex flex-col rounded-xl"
       >
         <div className="w-full flex items-center h-full justify-center flex-col px-4 md:px-8">
           <h1 className="text-4xl md:text-7xl font-anton text-center">

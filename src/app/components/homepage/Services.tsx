@@ -4,7 +4,7 @@ import { serviceData } from "./data";
 export default function Services() {
   return (
     <section
-      id="services"
+      id="aboutus"
       className="w-full md:py-24 px-4 md:px-8 relative bg-scroll bg-secondary"
     >
       <div className="flex flex-col md:flex-row gap-12 mb-10 w-full relative h-full bg-scroll md:justify-center items-start">
@@ -24,7 +24,7 @@ export default function Services() {
             return (
               <div
                 key={item.title}
-                className="flex flex-col md:flex-row bg-secondary sticky top-20 md:top-[15%] bg-scroll md:rounded-3xl min-h-[350px] md:min-h-min shadow-2xl md:items-center"
+                className="flex flex-col md:flex-row bg-[#111111] md:bg-secondary sticky top-20 md:top-[15%] bg-scroll rounded-md md:rounded-3xl min-h-[280px] md:min-h-min shadow-2xl md:items-center"
               >
                 <div className="hidden md:block pl-4">
                   <Image
@@ -35,13 +35,17 @@ export default function Services() {
                   />
                 </div>
 
-                <div className="block md:hidden h-10 opacity-40">
-                  <Image src={item.image} fill alt={item.title} />
-                </div>
-
                 <div className="flex flex-col md:flex-row items-center md:border-0 rounded-lg">
                   <div className="px-5 py-8 flex flex-col gap-6">
-                    <div>
+                    <div className="flex items-center gap-4">
+                      <div className="block md:hidden">
+                        <Image
+                          src={item.icon}
+                          width={20}
+                          height={50}
+                          alt={item.title}
+                        />
+                      </div>
                       <h3 className="font-anton font-bold text-xl">
                         {item.title}
                       </h3>

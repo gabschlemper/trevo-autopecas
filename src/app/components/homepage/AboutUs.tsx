@@ -41,13 +41,13 @@ export default function AboutUs() {
   };
   return (
     <section id="aboutus" className="py-10 md:py-24 px-4 md:px-8">
-      <div className="flex flex-col items-center lg:flex-row justify-between gap-10 md:gap-16 md:bg-black bg-opacity-20 rounded-lg md:p-8 w-full">
+      <div className="flex flex-col items-center lg:flex-row justify-between gap-10 md:gap-16 shadow-2xl bg-opacity-20 rounded-lg md:p-8 w-full">
         <div
           style={{
             backgroundImage: `url(${slides[currentIndex].url})`,
             borderRadius: "8px",
           }}
-          className="relative bg-cover bg-center h-[450px] w-full"
+          className="relative bg-cover bg-center h-[450px] w-full md:flex-1"
         >
           <div className="block md:group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
             <BsChevronCompactLeft onClick={prevSlide} size={16} />
@@ -57,7 +57,7 @@ export default function AboutUs() {
           </div>
         </div>
 
-        <div className="max-w-2xl">
+        <div className="md:flex-1">
           <h2 className="text-grey mb-2 text-4xl md:text-5xl">Sobre nós</h2>
           <span className="flex w-14 h-1 bg-primary-100 mb-8" />
           <p>
