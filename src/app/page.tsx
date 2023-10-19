@@ -14,7 +14,7 @@ import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <main className="overflow-scroll h-screen w-screen">
+    <main className="overflow-scroll h-screen w-screen scroll-smooth">
       <Header />
       {/* <Slider /> */}
       <Hero />

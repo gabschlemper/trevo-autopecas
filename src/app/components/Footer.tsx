@@ -15,9 +15,9 @@ export default function Footer() {
 
           <nav className="hidden md:flex gap-4 flex-row uppercase font-anton">
             <Link href="#aboutus">Sobre nós</Link>
-            <Link href="/">Serviços</Link>
-            <Link href="/">Nossa equipe</Link>
-            <Link href="/">Contato</Link>
+            <Link href="#services">Serviços</Link>
+            <Link href="#feedback">Feedback</Link>
+            <Link href="#location">Contato</Link>
           </nav>
         </div>
 
@@ -85,8 +85,12 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-      <div className="bg-black flex items-center justify-center py-3 text-gray-100">
-        <span>© {new Date().getFullYear()}</span>
+      <div className="bg-black flex items-center justify-center py-3 text-gray-100 text-sm">
+        <span>
+          Copyright © {new Date().getFullYear()}.{" "}
+          <Link href="https://gabschlemper.dev/">gabschlemper.</Link> All rights
+          reserved.
+        </span>
       </div>
     </footer>
   );

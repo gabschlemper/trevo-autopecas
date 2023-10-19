@@ -6,7 +6,7 @@ import { AiOutlineLoading, AiOutlineLoading3Quarters } from "react-icons/ai";
 const containerStyle = {
   width: "100%",
   height: "350px",
-  opacity: "0.5",
+  opacity: "0.8",
 };
 
 const location = {
@@ -37,6 +37,7 @@ export function Location() {
       zoom={16}
       onLoad={onLoad}
       onUnmount={onUnmount}
+      id="location"
     >
       <Marker position={location} />
     </GoogleMap>

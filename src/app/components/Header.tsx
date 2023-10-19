@@ -24,11 +24,13 @@ export default function Header() {
           alt="Trevo Autopeças logo"
         />
 
-        <nav className="hidden md:flex gap-4 pt-0 flex-row uppercase">
-          <Link href="#aboutus">Sobre nós</Link>
-          <Link href="/">Serviços</Link>
-          <Link href="/">Nossa equipe</Link>
-          <Link href="/">Contato</Link>
+        <nav>
+          <ul className="hidden md:flex gap-4 pt-0 flex-row uppercase">
+            <Link href="#aboutus">Sobre nós</Link>
+            <Link href="#services">Serviços</Link>
+            <Link href="#feedback">Feedback</Link>
+            <Link href="#location">Onde estamos</Link>
+          </ul>
         </nav>
 
         <div className="flex items-center gap-6">
@@ -61,9 +63,9 @@ export default function Header() {
       >
         <ul className="flex flex-col pt-32 px-9 gap-6 w-full h-full bg-secondary uppercase">
           <Link href="#aboutus">Sobre nós</Link>
-          <Link href="/">Serviços</Link>
-          <Link href="/">Nossa equipe</Link>
-          <Link href="/">Contato</Link>
+          <Link href="#services">Serviços</Link>
+          <Link href="#feedback">Feedback</Link>
+          <Link href="#location">Onde estamos</Link>
         </ul>
       </nav>
     </>

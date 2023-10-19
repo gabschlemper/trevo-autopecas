@@ -3,7 +3,10 @@ import { feedbackData } from "./data";
 
 export function Feedback() {
   return (
-    <section className="bg-gradient-to-t from-black to-secondary flex flex-col items-center gap-16 md:gap-24 py-10 md:py-24 px-4 md:px-8">
+    <section
+      id="feedback"
+      className="bg-gradient-to-t from-black to-secondary flex flex-col items-center gap-16 md:gap-24 py-10 md:py-24 px-4 md:px-8"
+    >
       <div className="flex flex-col gap-3 text-center">
         <h2 className="text-4xl md:text-5xl">
           Feedback dos <span className="text-primary-100">clientes</span>

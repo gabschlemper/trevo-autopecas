@@ -4,7 +4,7 @@ import { serviceData } from "./data";
 export default function Services() {
   return (
     <section
-      id="aboutus"
+      id="services"
       className="w-full md:py-24 px-4 md:px-8 relative bg-scroll bg-secondary"
     >
       <div className="flex flex-col md:flex-row gap-12 mb-10 w-full relative h-full bg-scroll md:justify-center items-start">
