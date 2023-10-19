@@ -9,6 +9,8 @@ import Hero from "./components/homepage/Hero";
 import { Brands } from "./components/homepage/Brands";
 import AboutUs from "./components/homepage/AboutUs";
 import { Location } from "./components/homepage/Location";
+import { OurTeam } from "./components/homepage/OurTeam";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -16,13 +18,15 @@ export default function Home() {
       <Header />
       {/* <Slider /> */}
       <Hero />
+      <AboutUs />
+      <Differential />
       <Services />
       <Brands />
-      <AboutUs />
       <OurMission />
       <Feedback />
-      <Differential />
+      {/* <OurTeam /> */}
       <Location />
+      <Footer />
     </main>
   );
 }

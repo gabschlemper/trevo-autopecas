@@ -8,35 +8,20 @@ import "swiper/css/pagination";
 import "swiper/css/free-mode";
 import { FreeMode, Pagination } from "swiper/modules";
 import { differencialData } from "./data";
+import Form from "../Form";
 
 export function Differential() {
   return (
-    <section className="bg-terciary px-4 md:px-8 py-20 md:py-40 text-secondary flex flex-col gap-16">
-      <div className="m-auto">
+    <section className="bg-terciary px-4 md:px-8 py-10 md:py-20 text-secondary flex flex-col gap-8 md:gap-16">
+      <div className="md:m-auto">
         <h3 className="font-anton text-secondary text-4xl md:text-5xl">
           Nosso diferencial
         </h3>
-        <span className="flex w-20 h-1 bg-primary-100 mb-8 mt-2" />
+        <span className="flex w-20 h-1 bg-primary-100 mb-4 md:mb-8 mt-2" />
       </div>
 
-      {/* <div className="w-full">
-        <ul className="flex flex-col md:flex-row">
-          {items.map((item) => (
-            <div
-              key={item.text}
-              className="flex flex-col items-center gap-6 md:gap-12 w-full p-10 md:p-20 border border-gray-100"
-            >
-              <Image src={item.icon} width={40} height={110} alt={item.text} />
-              <li className="text-secondary font-anton w-full text-center text-md md:text-xl">
-                {item.text}
-              </li>
-            </div>
-          ))}
-        </ul>
-      </div> */}
-
-      <div className="flex flex-col md:flex-row gap-20">
-        <div className="max-w-2xl py-10 p-6 rounded-xl">
+      <div className="flex flex-col lg:flex-row gap-10 lg:gap-20">
+        <div className="md:min-w-[500px] max-w-2xl md:p-6 rounded-xl">
           <h3 className="font-anton text-secondary text-2xl md:text-4xl mb-4">
             Para sua <span className="text-primary-100">empresa!</span>
             <br />
@@ -61,9 +46,12 @@ export function Differential() {
           <Swiper
             breakpoints={{
               340: {
+                slidesPerView: 1,
+              },
+              500: {
                 slidesPerView: 2,
               },
-              700: {
+              1000: {
                 slidesPerView: 3,
               },
             }}
@@ -72,14 +60,14 @@ export function Differential() {
               clickable: true,
             }}
             modules={[FreeMode, Pagination]}
-            className="lg:max-w-[900px] h-full"
+            className="max-w-[300px] sm:max-w-[600px] md:max-w-[600px] lg:max-w-[900px] h-[350px] lg:h-full"
             style={
               { "--swiper-pagination-color": "#F05022" } as React.CSSProperties
             }
           >
             {differencialData.map((item) => (
               <SwiperSlide key={item.title}>
-                <div className="flex flex-col items-center justify-center text-center gap-6 group relative text-secondary rounded-xl p-10 h-[90%] shadow-lg uppercase font-bold m-auto ml-4">
+                <div className="flex flex-col items-center justify-center text-center gap-6 group relative text-secondary rounded-xl p-10 h-[90%] md:h-[90%] md:shadow-lg uppercase font-bold m-auto ml-2 md:ml-4 shadow-lg">
                   <Image
                     src={item.icon}
                     width={30}

@@ -26,7 +26,7 @@ export default function OurMission() {
   return (
     <section
       id="aboutus"
-      className="py-10 px-8 flex flex-col md:flex-row justify-center items-center gap-20"
+      className="py-10 md:py-24 px-4 md:px-8 flex flex-col lg:flex-row justify-center items-center gap-20"
     >
       <div className="max-w-3xl shadow-2xl bg-secondary flex flex-col gap-6 px-2 py-6 md:p-16 rounded-md md:h-[400px] h-[480px]">
         <h1 className="text-grey text-4xl md:text-5xl text-primary-100">

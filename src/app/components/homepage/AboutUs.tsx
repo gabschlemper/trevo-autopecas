@@ -9,16 +9,19 @@ import { useState } from "react";
 
 const slides = [
   {
-    url: "/background-hero.png",
+    url: "/aboutus/trevo4.png",
   },
   {
-    url: "/background-slider-1.png",
+    url: "/aboutus/trevo3.png",
   },
   {
-    url: "/background-slider-2.png",
+    url: "/aboutus/trevo2.png",
   },
   {
-    url: "/background-slider-3.png",
+    url: "/aboutus/trevo.png",
+  },
+  {
+    url: "/aboutus/trevo1.png",
   },
 ];
 
@@ -37,11 +40,14 @@ export default function AboutUs() {
     setCurrentIndex(newIndex);
   };
   return (
-    <section id="aboutus" className="py-24 px-4 md:px-8">
-      <div className="flex flex-col items-center md:flex-row justify-between gap-10 md:gap-16 bg-black bg-opacity-20 rounded-lg p-8  w-full">
+    <section id="aboutus" className="py-10 md:py-24 px-4 md:px-8">
+      <div className="flex flex-col items-center lg:flex-row justify-between gap-10 md:gap-16 md:bg-black bg-opacity-20 rounded-lg md:p-8 w-full">
         <div
-          style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
-          className="w-full h-[400px] relative"
+          style={{
+            backgroundImage: `url(${slides[currentIndex].url})`,
+            borderRadius: "8px",
+          }}
+          className="relative bg-cover bg-center h-[450px] w-full"
         >
           <div className="block md:group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
             <BsChevronCompactLeft onClick={prevSlide} size={16} />

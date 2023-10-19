@@ -24,7 +24,7 @@ export default function Services() {
             return (
               <div
                 key={item.title}
-                className="flex flex-col md:flex-row bg-black bg-opacity-95 sticky top-20 md:top-[15%] bg-scroll md:rounded-3xl min-h-[350px] md:min-h-min shadow-2xl md:items-center"
+                className="flex flex-col md:flex-row bg-secondary sticky top-20 md:top-[15%] bg-scroll md:rounded-3xl min-h-[350px] md:min-h-min shadow-2xl md:items-center"
               >
                 <div className="hidden md:block pl-4">
                   <Image

@@ -160,3 +160,46 @@ export const carouselBrands = [
   { icon: "/brands/ford.svg" },
   { icon: "/brands/chevrolet.svg" },
 ];
+
+export const teamData = [
+  {
+    img: "/team1.png",
+    name: "Wagna Matos",
+    role: "Sócia e proprietária",
+  },
+  {
+    img: "/team1.png",
+    name: "Wagna Matos",
+    role: "Sócia e proprietária",
+  },
+  {
+    img: "/team1.png",
+    name: "Pamela",
+    role: "Vendedora",
+  },
+  {
+    img: "/team1.png",
+    name: "Eduardo",
+    role: "Vendedor",
+  },
+  {
+    img: "/team1.png",
+    name: "Leonardo",
+    role: "Sócio e proprietário",
+  },
+  {
+    img: "/team1.png",
+    name: "Maria Luiza",
+    role: "Arquiteta",
+  },
+  {
+    img: "/team1.png",
+    name: "Gabriela",
+    role: "Desenvolvedora",
+  },
+  {
+    img: "/team1.png",
+    name: "Wagna Matos",
+    role: "Sócia e proprietária",
+  },
+];
