@@ -62,10 +62,38 @@ export default function Header() {
         }`}
       >
         <ul className="flex flex-col pt-32 px-9 gap-6 w-full h-full bg-secondary uppercase">
-          <Link href="#aboutus">Sobre nós</Link>
-          <Link href="#services">Serviços</Link>
-          <Link href="#feedback">Feedback</Link>
-          <Link href="#location">Onde estamos</Link>
+          <Link
+            href="#aboutus"
+            onClick={() => {
+              setIsMenuOpen(false);
+            }}
+          >
+            Sobre nós
+          </Link>
+          <Link
+            href="#services"
+            onClick={() => {
+              setIsMenuOpen(false);
+            }}
+          >
+            Serviços
+          </Link>
+          <Link
+            href="#feedback"
+            onClick={() => {
+              setIsMenuOpen(false);
+            }}
+          >
+            Feedback
+          </Link>
+          <Link
+            href="#location"
+            onClick={() => {
+              setIsMenuOpen(false);
+            }}
+          >
+            Onde estamos
+          </Link>
         </ul>
       </nav>
     </>
