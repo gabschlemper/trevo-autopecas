@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { GoogleMap, Marker, useJsApiLoader } from "@react-google-maps/api";
-import { AiOutlineLoading, AiOutlineLoading3Quarters } from "react-icons/ai";
 
 const containerStyle = {
   width: "100%",
@@ -38,6 +37,7 @@ export function Location() {
       onLoad={onLoad}
       onUnmount={onUnmount}
       id="location"
+      options={{ scrollwheel: false }}
     >
       <Marker position={location} />
     </GoogleMap>
