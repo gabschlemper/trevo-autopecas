@@ -15,8 +15,10 @@ export default function Modal() {
           <div className="flex justify-center items-center overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-non bg-black bg-opacity-80">
             <div className="relative w-full md:min-w-[600px] my-6 mx-4 md:mx-auto max-w-3xl">
               <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-secondary outline-none focus:outline-none ">
-                <div className="flex items-center justify-between border-b px-8 py-6">
-                  <h3 className="text-3xl text-terciary">Entre em contato!</h3>
+                <div className="flex items-center justify-between px-8 py-6 shadow-2xl">
+                  <p className="font-anton uppercase text-3xl text-terciary">
+                    Entre em contato!
+                  </p>
                   <Button
                     className="text-terciary"
                     onClick={() => setShowModal(false)}
@@ -26,23 +28,6 @@ export default function Modal() {
                 </div>
                 <div className="w-full px-8 py-6 m-auto">
                   <Form />
-                </div>
-
-                <div className="flex justify-end items-center gap-3 px-8 py-4 border-t border-solid border-gray-200 rounded-b">
-                  <Button
-                    className="py-2 px-10 border"
-                    type="button"
-                    onClick={() => setShowModal(false)}
-                  >
-                    Fechar
-                  </Button>
-                  <Button
-                    className="text-primary-100 py-2 px-10 border border-primary-100"
-                    type="button"
-                    onClick={() => setShowModal(false)}
-                  >
-                    Enviar
-                  </Button>
                 </div>
               </div>
             </div>

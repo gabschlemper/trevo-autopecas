@@ -1,6 +1,9 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
 import { z } from "zod";
+import Button from "./Button";
+import { useContext } from "react";
+import { ModalContext } from "../../../public/contexts/ModalContext";
 
 const userSchema = z.object({
   name: z
@@ -28,6 +31,7 @@ type Inputs = {
 };
 
 export default function Form() {
+  const { setShowModal } = useContext(ModalContext);
   const {
     register,
     control,
@@ -138,14 +142,22 @@ export default function Form() {
           )}
         />
       </div>
-
-      <button
-        type="submit"
-        disabled={isSubmitting}
-        className="text-primary-100 border-2 border-primary-100 rounded-3xl py-2 px-5 uppercase hover:shadow-lg hover:scale-105 transition-all font-bold"
-      >
-        Entre em contato
-      </button>
+      <div className="flex items-center justify-end gap-4 pt-2">
+        <Button
+          className="py-2 px-10 border"
+          type="button"
+          onClick={() => setShowModal(false)}
+        >
+          Fechar
+        </Button>
+        <button
+          type="submit"
+          disabled={isSubmitting}
+          className="text-primary-100 border-2 border-primary-100 rounded-3xl py-2 px-5 uppercase hover:shadow-lg hover:scale-105 transition-all font-bold"
+        >
+          Enviar
+        </button>
+      </div>
     </form>
   );
 }
