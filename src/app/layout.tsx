@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Roboto, Anton } from "next/font/google";
+import { ModalContextProvider } from "../../public/contexts/ModalContext";
 
 const roboto = Roboto({
   weight: ["400", "700"],
@@ -33,7 +34,9 @@ export default function RootLayout({
       lang="en"
       className={`${roboto.variable} ${anton.variable} font-sans snap-y	`}
     >
-      <body>{children}</body>
+      <body>
+        <ModalContextProvider>{children}</ModalContextProvider>
+      </body>
     </html>
   );
 }

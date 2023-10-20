@@ -8,9 +8,11 @@ import "swiper/css/pagination";
 import "swiper/css/free-mode";
 import { FreeMode, Pagination } from "swiper/modules";
 import { differencialData } from "./data";
-import Form from "../Form";
+import { ModalContext } from "../../../../public/contexts/ModalContext";
+import { useContext } from "react";
 
 export function Differential() {
+  const { setShowModal } = useContext(ModalContext);
   return (
     <section className="md:bg-secondary bg-terciary">
       <div className="bg-terciary mx-4 md:mx-8 rounded-xl py-10 md:py-20 text-secondary flex flex-col gap-8 md:gap-16">
@@ -30,7 +32,10 @@ export function Differential() {
               para fornecer as peças e acessórios de que você precisa.
             </p>
             <span>
-              <Button className="bg-primary-100 text-terciary flex items-center gap-2 mt-10 py-2 px-5">
+              <Button
+                className="bg-primary-100 text-terciary flex items-center gap-2 mt-10 py-2 px-5"
+                onClick={() => setShowModal(true)}
+              >
                 Contato <BsFillArrowRightCircleFill size={26} />
               </Button>
             </span>
@@ -54,7 +59,7 @@ export function Differential() {
                 clickable: true,
               }}
               modules={[FreeMode, Pagination]}
-              className="max-w-[300px] sm:max-w-[600px] md:max-w-[600px] lg:max-w-[900px] h-[350px] lg:h-full"
+              className="max-w-[300px] sm:max-w-[600px] md:max-w-[600px] lg:max-w-[850px] h-[350px] lg:h-full"
               style={
                 {
                   "--swiper-pagination-color": "#F05022",

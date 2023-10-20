@@ -11,6 +11,7 @@ import AboutUs from "./components/homepage/AboutUs";
 import { Location } from "./components/homepage/Location";
 import { OurTeam } from "./components/homepage/OurTeam";
 import Footer from "./components/Footer";
+import Modal from "./components/Modal";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Header />
       {/* <Slider /> */}
       <Hero />
+      <Modal />
       <AboutUs />
       <Differential />
       <Services />

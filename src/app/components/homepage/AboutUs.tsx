@@ -5,7 +5,8 @@ import {
   BsFillArrowRightCircleFill,
 } from "react-icons/bs";
 import Button from "../Button";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { ModalContext } from "../../../../public/contexts/ModalContext";
 
 const slides = [
   {
@@ -27,6 +28,7 @@ const slides = [
 
 export default function AboutUs() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const { setShowModal } = useContext(ModalContext);
 
   const prevSlide = () => {
     const isFirstSlide = currentIndex === 0;
@@ -71,7 +73,10 @@ export default function AboutUs() {
             de alta qualidade a preços competitivos.
           </p>
           <span>
-            <Button className="bg-primary-100 text-terciary flex items-center gap-2 mt-10 py-2 px-5">
+            <Button
+              className="bg-primary-100 text-terciary flex items-center gap-2 mt-10 py-2 px-5"
+              onClick={() => setShowModal(true)}
+            >
               Contato <BsFillArrowRightCircleFill size={26} />
             </Button>
           </span>
