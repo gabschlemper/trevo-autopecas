@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   title:
     "Trevo Autopeças - Qualidade e Variedade em Autopeças para o seu Veículo",
   description:
-    "Bem-vindo à Trevo Autopeças, sua fonte confiável de autopeças de alta qualidade localizado no Naque em Minas Gerais. Explore nossa ampla seleção de peças e acessórios automotivos para manutenção e reparo. Conte com nossa experiência e atendimento excepcional para manter o seu veículo funcionando com desempenho máximo. Encontre as peças certas, sempre!",
+    "Bem-vindo à Trevo Autopeças, sua fonte confiável de autopeças de alta qualidade localizado no Naque em Minas Gerais.",
 };
 
 export default function RootLayout({
