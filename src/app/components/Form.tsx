@@ -30,7 +30,10 @@ type Inputs = {
   message: string;
 };
 
-export default function Form() {
+type FormProps = {
+  modal?: boolean;
+};
+export default function Form({ modal }: FormProps) {
   const { setShowModal } = useContext(ModalContext);
   const {
     register,
@@ -50,8 +53,12 @@ export default function Form() {
 
   const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
 
-  const inputBase =
-    "bg-black rounded-xl h-10 bg-opacity-40 px-4 focus:outline-none focus:ring-1 focus:ring-gray";
+  const inputBase = `${
+    modal
+      ? "bg-black bg-opacity-40"
+      : "bg-transparent border-b border-primary-100"
+  } rounded-xl h-10 px-4 focus:outline-none focus:ring-1 focus:ring-gray`;
+
   const errorMessageBase =
     "text-xs text-primary-100 opacity-60 pl-3 absolute right-10 top-3";
   return (
@@ -143,17 +150,20 @@ export default function Form() {
         />
       </div>
       <div className="flex items-center justify-end gap-4 pt-2">
-        <Button
-          className="py-2 px-10 border"
-          type="button"
-          onClick={() => setShowModal(false)}
-        >
-          Fechar
-        </Button>
+        {modal && (
+          <Button
+            className="py-2 px-10 border"
+            type="button"
+            onClick={() => setShowModal(false)}
+          >
+            Fechar
+          </Button>
+        )}
+
         <button
           type="submit"
           disabled={isSubmitting}
-          className="text-primary-100 border-2 border-primary-100 rounded-3xl py-2 px-5 uppercase hover:shadow-lg hover:scale-105 transition-all font-bold"
+          className=" text-primary-100 border-2 border-primary-100 rounded-3xl py-2 px-5 uppercase hover:shadow-lg hover:scale-105 transition-all font-bold"
         >
           Enviar
         </button>

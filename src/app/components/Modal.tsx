@@ -27,7 +27,7 @@ export default function Modal() {
                   </Button>
                 </div>
                 <div className="w-full px-8 py-6 m-auto">
-                  <Form />
+                  <Form modal />
                 </div>
               </div>
             </div>
