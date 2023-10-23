@@ -25,7 +25,7 @@ export default function Header() {
         />
 
         <nav>
-          <ul className="hidden md:flex gap-4 pt-0 flex-row uppercase">
+          <ul className="hidden md:flex gap-12 pt-0 flex-row uppercase">
             <Link href="#aboutus">Sobre nós</Link>
             <Link href="#services">Serviços</Link>
             <Link href="#feedback">Feedback</Link>
@@ -35,15 +35,18 @@ export default function Header() {
 
         <div className="flex items-center gap-6">
           <div className="flex gap-3 cursor-pointer">
-            <Link href="/">
+            <a
+              href="https://api.whatsapp.com/send?phone=553398018479"
+              target="_blank"
+            >
               <FaWhatsapp size={26} />
-            </Link>
-            <Link
+            </a>
+            <a
               href="https://www.instagram.com/trevocentroautomotivo"
               target="_blank"
             >
               <FaInstagram size={26} />
-            </Link>
+            </a>
           </div>
 
           <button onClick={handleisMenuOpen} className="md:hidden z-20">

@@ -68,7 +68,7 @@ export function Differential() {
             >
               {differencialData.map((item) => (
                 <SwiperSlide key={item.title}>
-                  <div className="flex flex-col items-center justify-center text-center gap-6 group relative text-secondary rounded-xl p-10 h-[90%] md:h-[90%] md:shadow-lg uppercase font-bold m-auto ml-2 md:ml-4 shadow-lg">
+                  <div className="flex flex-col items-center justify-center text-center gap-6 group relative text-secondary rounded-xl p-10 h-[90%] md:h-[90%] md:shadow-lg uppercase font-bold m-auto ml-2 md:ml-4 shadow-lg hover:cursor-pointer">
                     <Image
                       src={item.icon}
                       width={30}

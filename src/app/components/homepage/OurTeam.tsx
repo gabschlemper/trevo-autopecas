@@ -7,7 +7,7 @@ export function OurTeam() {
       <h3 className="text-4xl md:text-5xl font-anton text-center mb-20">
         Conheça nossa <span className="text-primary-100">equipe</span>
       </h3>
-      <div className="grid grid-cols-4 gap-2 max-w-7xl w-full m-auto">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-2 w-full m-auto">
         {teamData.map((item) => (
           <div
             key={item.name}
