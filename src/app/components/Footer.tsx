@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { AiOutlineMail } from "react-icons/ai";
-import { FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
 import { IoLocationOutline } from "react-icons/io5";
-
+import { openingTimeData, paymentData } from "./homepage/data";
 export default function Footer() {
   const listStyle = "flex items-center justify-between";
 
@@ -13,7 +13,7 @@ export default function Footer() {
         <div className="flex flex-col items-center">
           <Image src="/logo.svg" width={180} height={90} alt="Logo" />
 
-          <nav className="hidden md:flex gap-4 flex-row uppercase font-anton">
+          <nav className="hidden md:flex gap-8 flex-row uppercase font-anton">
             <Link href="#aboutus">Sobre nós</Link>
             <Link href="#services">Serviços</Link>
             <Link href="#feedback">Feedback</Link>
@@ -33,57 +33,52 @@ export default function Footer() {
 
         <div className="p-3 justify flex gap-4 flex-col">
           <h4 className="text-lg font-anton uppercase">Contato</h4>
-          <div className="flex gap-3 items-center">
+          <a
+            className="flex gap-3 items-center"
+            href="https://api.whatsapp.com/send?phone=553398018479"
+            target="_blank"
+          >
             <FaWhatsapp size={20} />
             <span>(31) 97570-0098</span>
-          </div>
-          <div className="flex gap-3 items-center">
+          </a>
+          <a
+            className="flex gap-3 items-center"
+            target="_blank"
+            href="mailto:trevoautopecas22@gmail.com"
+          >
             <AiOutlineMail size={20} />
             <span>trevoautopecas22@gmail.com</span>
-          </div>
-          <div className="flex gap-3 items-center">
+          </a>
+          <a
+            className="flex gap-3 items-start"
+            href="https://maps.app.goo.gl/2TYYVeyYzdtuR5ja6"
+            target="_blank"
+          >
             <IoLocationOutline size={20} />
             <span>
               BR-381, KM 200 - Centro,
               <br /> Naque - MG, 35117-000
             </span>
-          </div>
+          </a>
         </div>
         <div className="p-3 justify flex gap-4 flex-col">
           <h4 className="text-lg font-anton uppercase">
             Horário de funcionamento
           </h4>
           <ul>
-            <li className={listStyle}>
-              <span>Segunda-feira</span>
-              <span>08:00 - 18:00</span>
-            </li>
-            <li className={listStyle}>
-              <span>Terça-feira</span>
-              <span>08:00 - 18:00</span>
-            </li>
-            <li className={listStyle}>
-              <span>Quarta-feira</span>
-              <span>08:00 - 18:00</span>
-            </li>
-            <li className={listStyle}>
-              <span>Quinta-feira</span>
-              <span>08:00 - 18:00</span>
-            </li>
-            <li className={listStyle}>
-              <span>Sexta-feira</span>
-              <span>08:00 - 18:00</span>
-            </li>
-            <li className={listStyle}>
-              <span>Sábado</span>
-              <span>08:00 - 12:00</span>
-            </li>
-            <li className={listStyle}>
-              <span>Domingo</span>
-              <span>Fechado</span>
-            </li>
+            {openingTimeData.map((item) => (
+              <li key={item.day} className={listStyle}>
+                <span>{item.day}</span>
+                <span>{item.time}</span>
+              </li>
+            ))}
           </ul>
         </div>
+      </div>
+      <div className="bg-primary-100 w-full flex justify-center gap-6 py-2">
+        {paymentData.map((item, i) => (
+          <Image key={i} src={item.icon} width={30} height={20} alt="" />
+        ))}
       </div>
       <div className="bg-black flex items-center justify-center py-3 text-gray-100 text-sm">
         <span>

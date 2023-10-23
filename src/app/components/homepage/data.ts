@@ -197,3 +197,45 @@ export const teamData = [
     role: "Sócia e proprietária",
   },
 ];
+
+export const openingTimeData = [
+  {
+    day: "Segunda-Feira",
+    time: "08:00 - 18:00",
+  },
+  {
+    day: "Terça-Feira",
+    time: "08:00 - 18:00",
+  },
+  {
+    day: "Quarta-Feira",
+    time: "08:00 - 18:00",
+  },
+  {
+    day: "Quinta-Feira",
+    time: "08:00 - 18:00",
+  },
+  {
+    day: "Sexta-Feira",
+    time: "08:00 - 18:00",
+  },
+  {
+    day: "Sábado",
+    time: "08:00 - 12:00",
+  },
+  {
+    day: "Domingo",
+    time: "Fechado",
+  },
+];
+
+export const paymentData = [
+  { icon: "/brands/visa.svg" },
+  { icon: "/brands/elo.svg" },
+  { icon: "/brands/hipercard.svg" },
+  { icon: "/brands/maestro.svg" },
+  { icon: "/brands/pix.svg" },
+  { icon: "/brands/american-express.svg" },
+  { icon: "/brands/mastercard.svg" },
+  { icon: "/brands/money.svg" },
+];
