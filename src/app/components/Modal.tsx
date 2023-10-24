@@ -13,7 +13,7 @@ export default function Modal() {
       {showModal ? (
         <>
           <div className="flex justify-center items-center overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-non bg-black bg-opacity-80">
-            <div className="relative w-full md:min-w-[600px] my-6 mx-4 md:mx-auto max-w-3xl">
+            <div className="relative w-full md:min-w-[600px] my-6 mx-2 md:mx-auto max-w-3xl">
               <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-secondary outline-none focus:outline-none ">
                 <div className="flex items-center justify-between px-8 py-6 shadow-2xl">
                   <p className="font-anton uppercase text-3xl text-terciary">
@@ -23,7 +23,7 @@ export default function Modal() {
                     className="text-terciary"
                     onClick={() => setShowModal(false)}
                   >
-                    <AiOutlineCloseCircle size={26} />
+                    <AiOutlineCloseCircle size={30} />
                   </Button>
                 </div>
                 <div className="w-full px-8 py-6 m-auto">

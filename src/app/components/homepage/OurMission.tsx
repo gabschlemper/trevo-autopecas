@@ -24,38 +24,47 @@ export default function OurMission() {
   };
 
   return (
-    <section
-      id="aboutus"
-      className="py-10 md:py-24 px-4 md:px-8 flex flex-col lg:flex-row justify-center items-center gap-20"
-    >
-      <div className="max-w-3xl shadow-2xl bg-secondary flex flex-col gap-6 px-2 py-6 md:p-16 rounded-md md:h-[400px] h-[480px]">
-        <h1 className="text-grey text-4xl md:text-5xl text-primary-100">
-          {missionData[currentIndex].title}
-        </h1>
-        <p className="text-terciary">{missionData[currentIndex].description}</p>
-        <div className="flex gap-2 mt-auto">
-          <Button
-            className="py-0 px-0 hover:bg-primary-100 hover:opacity-90 transition-all duration-300"
-            onClick={prevCard}
-          >
-            <BsFillArrowLeftCircleFill size={30} />
-          </Button>
-          <Button
-            className="py-0 px-0 hover:bg-primary-100  hover:opacity-90 transition-all duration-300"
-            onClick={nextCard}
-          >
-            <BsFillArrowRightCircleFill size={30} />
-          </Button>
-        </div>
-      </div>
+    <>
+      <section
+        id="aboutus"
+        className="py-10 md:py-24 px-4 md:px-8 flex flex-col"
+      >
+        <div className="flex justify-center items-center gap-20">
+          <div className="max-w-3xl shadow-2xl bg-secondary flex flex-col gap-6 px-2 py-6 md:p-16 rounded-md md:h-[400px] h-[480px]">
+            <h1 className="text-grey text-4xl md:text-5xl text-primary-100">
+              {missionData[currentIndex].title}
+            </h1>
+            <p className="text-terciary">
+              {missionData[currentIndex].description}
+            </p>
+            <div className="flex gap-2 mt-auto">
+              <Button
+                className="py-0 px-0 hover:bg-primary-100 hover:opacity-90 transition-all duration-300"
+                onClick={prevCard}
+              >
+                <BsFillArrowLeftCircleFill size={30} />
+              </Button>
+              <Button
+                className="py-0 px-0 hover:bg-primary-100  hover:opacity-90 transition-all duration-300"
+                onClick={nextCard}
+              >
+                <BsFillArrowRightCircleFill size={30} />
+              </Button>
+            </div>
+          </div>
 
-      <Image
-        src="/wheel.svg"
-        width={400}
-        height={100}
-        alt="pneu"
-        className="animate-spin hidden md:block"
-      />
-    </section>
+          <Image
+            src="/wheel.svg"
+            width={400}
+            height={100}
+            alt="pneu"
+            className="animate-spin hidden md:block"
+          />
+        </div>
+        <div className="bg-terciary text-secondary py-6 text-center font-anton mt-20 rounded-xl text-xl uppercase ">
+          Oficina mecânica e autopeças
+        </div>
+      </section>
+    </>
   );
 }

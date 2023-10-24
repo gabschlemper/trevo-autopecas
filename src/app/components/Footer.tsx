@@ -9,7 +9,7 @@ export default function Footer() {
 
   return (
     <footer className="">
-      <div className="px-4 md:px-8 py-10 md:py-20 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-20 text-gray-100">
+      <div className="px-4 md:px-8 py-10 md:py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-20 text-gray-100">
         <div className="flex flex-col items-center">
           <Image src="/logo.svg" width={180} height={90} alt="Logo" />
 
@@ -75,12 +75,12 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-      <div className="bg-primary-100 w-full flex justify-center gap-6 py-2">
+      <div className="bg-primary-100 w-full flex justify-center gap-6 py-2 px-4">
         {paymentData.map((item, i) => (
           <Image key={i} src={item.icon} width={30} height={20} alt="" />
         ))}
       </div>
-      <div className="bg-black flex items-center justify-center py-3 text-gray-100 text-sm">
+      <div className="bg-black flex items-center justify-center py-3 text-gray-100 text-xs">
         <span>
           Copyright © {new Date().getFullYear()}.{" "}
           <Link href="https://gabschlemper.dev/">gabschlemper.</Link> All rights

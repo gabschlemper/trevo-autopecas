@@ -15,7 +15,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="flex justify-between items-center py-4 px-4 md:px-8 font-bold shadow-md z-50 absolute top-0 w-full bg-secondary">
+      <header className="flex fixed justify-between items-center py-4 px-4 md:px-8 font-bold shadow-md z-50 top-0 w-full bg-secondary">
         <Image
           src="/logo.svg"
           width={60}
@@ -29,7 +29,7 @@ export default function Header() {
             <Link href="#aboutus">Sobre nós</Link>
             <Link href="#services">Serviços</Link>
             <Link href="#feedback">Feedback</Link>
-            <Link href="#location">Onde estamos</Link>
+            <Link href="#contact">Contato</Link>
           </ul>
         </nav>
 
@@ -60,8 +60,8 @@ export default function Header() {
       </header>
 
       <nav
-        className={`md:hidden font-bold absolute left-0 h-full w-full ${
-          isMenuOpen ? "flex z-10 opacity-100" : "hidden"
+        className={`md:hidden font-bold h-screen w-full fixed ${
+          isMenuOpen ? "z-10 opacity-100" : "hidden"
         }`}
       >
         <ul className="flex flex-col pt-32 px-9 gap-6 w-full h-full bg-secondary uppercase">
@@ -90,12 +90,12 @@ export default function Header() {
             Feedback
           </Link>
           <Link
-            href="#location"
+            href="#contact"
             onClick={() => {
               setIsMenuOpen(false);
             }}
           >
-            Onde estamos
+            Contato
           </Link>
         </ul>
       </nav>

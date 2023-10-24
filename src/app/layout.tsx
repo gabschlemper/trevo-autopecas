@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Roboto, Anton } from "next/font/google";
 import { ModalContextProvider } from "../../public/contexts/ModalContext";
+import { ScrollToTopButton } from "./components/ButtonScrollTop";
 
 const roboto = Roboto({
   weight: ["400", "700"],
@@ -32,7 +33,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${roboto.variable} ${anton.variable} font-sans snap-y	`}
+      className={`${roboto.variable} ${anton.variable} font-sans`}
     >
       <body>
         <ModalContextProvider>{children}</ModalContextProvider>

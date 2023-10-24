@@ -1,22 +1,36 @@
 import Image from "next/image";
 import { serviceData } from "./data";
+import Button from "../Button";
+import { BsFillArrowRightCircleFill } from "react-icons/bs";
+import { useContext } from "react";
+import { ModalContext } from "../../../../public/contexts/ModalContext";
 
 export default function Services() {
+  const { setShowModal } = useContext(ModalContext);
   return (
     <section
-      id="aboutus"
-      className="w-full md:py-24 px-4 md:px-8 relative bg-scroll bg-secondary"
+      id="services"
+      className="w-full md:pb-24 px-4 md:px-8 relative bg-scroll bg-secondary"
     >
-      <div className="flex flex-col md:flex-row gap-12 mb-10 w-full relative h-full bg-scroll md:justify-center items-start">
-        <div className="flex flex-col md:align-start justify-center py-20 gap-6 md:gap-15 md:items-start md:sticky static top-20 ">
-          <h2 className="text-4xl md:text-5xl text-primary-100">
-            Nossos Serviços
-          </h2>
+      <div className="flex flex-col md:flex-row gap-12 mb-10 w-full relative h-full bg-scroll md:justify-between items-start">
+        <div className="flex flex-col md:align-start justify-center py-20 md:gap-15 md:items-start md:sticky static top-20 ">
+          <div>
+            <h2 className="text-4xl md:text-5xl text-terciary">
+              Nossos Serviços
+            </h2>
+            <span className="flex w-14 h-1 bg-primary-100 mb-3 mt-1" />
+          </div>
           <p className="max-w-md text-gray-200 ">
             A Trevo oferece serviços automotivos de qualidade, desde autopeças
             confiáveis até uma oficina mecânica experiente. Sua satisfação é
             nossa prioridade.
           </p>
+          <Button
+            className="bg-primary-100 text-terciary flex items-center gap-2 mt-10 py-2 px-5"
+            onClick={() => setShowModal(true)}
+          >
+            Entre em Contato <BsFillArrowRightCircleFill size={26} />
+          </Button>
         </div>
 
         <div className="flex flex-col max-w-5xl gap-20">

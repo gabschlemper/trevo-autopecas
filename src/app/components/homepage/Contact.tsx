@@ -6,8 +6,8 @@ import Form from "../Form";
 
 export default function Contact() {
   return (
-    <section className="md:bg-secondary bg-terciary md:pt-20">
-      <div className="bg-terciary text-secondary flex justify-center flex-col md:flex-row gap-20 mx-4 md:mx-8 py-16 md:py-20 md:px-8 rounded-xl">
+    <section id="contact" className="md:bg-secondary bg-terciary md:pt-20">
+      <div className="bg-terciary text-secondary flex justify-between flex-col md:flex-row gap-20 mx-4 md:mx-8 py-16 md:py-20 md:px-60 rounded-xl">
         <div className="gap-4 flex-col">
           <div className="m-auto">
             <h4 className="text-3xl font-anton uppercase mb-2">Contato</h4>

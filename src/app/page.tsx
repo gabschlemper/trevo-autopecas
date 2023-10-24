@@ -1,17 +1,16 @@
-import Image from "next/image";
+"use client";
 import Header from "./components/Header";
 import OurMission from "./components/homepage/OurMission";
 import { Differential } from "./components/homepage/Differential";
 import { Feedback } from "./components/homepage/Feedback";
 import Services from "./components/homepage/Services";
-import Slider from "./components/homepage/Slider";
 import Hero from "./components/homepage/Hero";
 import { Brands } from "./components/homepage/Brands";
 import AboutUs from "./components/homepage/AboutUs";
 import { Location } from "./components/homepage/Location";
-import { OurTeam } from "./components/homepage/OurTeam";
 import Footer from "./components/Footer";
 import Modal from "./components/Modal";
+import Contact from "./components/homepage/Contact";
 
 export default function Home() {
   return (
@@ -22,12 +21,13 @@ export default function Home() {
       <Modal />
       <AboutUs />
       <Differential />
+      <OurMission />
       <Services />
       <Brands />
-      <OurMission />
       <Feedback />
       {/* <OurTeam /> */}
       <Location />
+      <Contact />
       <Footer />
     </main>
   );
