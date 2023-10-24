@@ -2,7 +2,6 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Roboto, Anton } from "next/font/google";
 import { ModalContextProvider } from "../../public/contexts/ModalContext";
-import { ScrollToTopButton } from "./components/ButtonScrollTop";
 
 const roboto = Roboto({
   weight: ["400", "700"],
