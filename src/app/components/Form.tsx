@@ -2,8 +2,9 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
 import { z } from "zod";
 import Button from "./Button";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { ModalContext } from "../../../public/contexts/ModalContext";
+import { sendContactForm } from "../../../lib/api";
 
 const userSchema = z.object({
   name: z
@@ -39,8 +40,9 @@ export default function Form({ modal }: FormProps) {
     register,
     control,
     handleSubmit,
-    formState: { errors, isSubmitting },
+    formState: { errors, isSubmitting, isLoading, isSubmitSuccessful },
     watch,
+    reset,
   } = useForm<Inputs>({
     defaultValues: {
       name: "",
@@ -51,7 +53,32 @@ export default function Form({ modal }: FormProps) {
     resolver: zodResolver(userSchema),
   });
 
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+  const onSubmit: SubmitHandler<Inputs> = async (data) => {
+    try {
+      // Validate the input data
+      const result = userSchema.safeParse(data);
+
+      if (result.success) {
+        // Data is valid, proceed with the submission
+        try {
+          await sendContactForm(data);
+          alert("Obrigada por entrar em contato!");
+          setShowModal(false);
+        } catch (error) {
+          // Handle API request error here
+          console.error("API request error:", error);
+          alert("Sua mensagem não foi enviada, tente novamente!");
+          setShowModal(false);
+        }
+      } else {
+        // Data is not valid, handle validation errors
+        console.log("Validation errors:", result.error);
+        // Optionally, you can display validation errors to the user
+      }
+    } catch (error) {
+      console.log("Validation error:", error);
+    }
+  };
 
   const inputBase = `${
     modal
@@ -67,6 +94,8 @@ export default function Form({ modal }: FormProps) {
       className="flex flex-col gap-2"
       onSubmit={handleSubmit(onSubmit)}
     >
+      {/* {errors && <div>A mensagem falhou!</div>} */}
+
       <div className="flex flex-col gap-1 relative">
         <Controller
           name="name"
@@ -150,7 +179,7 @@ export default function Form({ modal }: FormProps) {
         />
       </div>
       <div className="flex items-center justify-end gap-4 pt-2">
-        {modal && (
+        {/* {modal && (
           <Button
             className="py-2 px-10 border"
             type="button"
@@ -158,7 +187,7 @@ export default function Form({ modal }: FormProps) {
           >
             Fechar
           </Button>
-        )}
+        )} */}
 
         <button
           type="submit"
