@@ -43,8 +43,10 @@ const handler = async (
         ...generateEmailContent(data),
         subject: data.subject,
       });
-      return res.status(400).json({ message: "Success message" });
+      console.log("Email sent successfully");
+      return res.status(200).json({ message: "Success" });
     } catch (error: any) {
+      console.log("Email sending error:", error);
       return res.status(400).json({ message: error.message });
     }
   }

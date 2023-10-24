@@ -83,8 +83,10 @@ export default function Footer() {
       <div className="bg-black flex items-center justify-center py-3 text-gray-100 text-xs">
         <span>
           Copyright © {new Date().getFullYear()}.{" "}
-          <Link href="https://gabschlemper.dev/">gabschlemper.</Link> All rights
-          reserved.
+          <a target="_blank" href="https://gabschlemper.dev/">
+            gabschlemper.
+          </a>{" "}
+          All rights reserved.
         </span>
       </div>
     </footer>

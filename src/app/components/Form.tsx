@@ -55,25 +55,18 @@ export default function Form({ modal }: FormProps) {
 
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
     try {
-      // Validate the input data
       const result = userSchema.safeParse(data);
-
       if (result.success) {
-        // Data is valid, proceed with the submission
         try {
           await sendContactForm(data);
           alert("Obrigada por entrar em contato!");
           setShowModal(false);
+          reset();
         } catch (error) {
-          // Handle API request error here
-          console.error("API request error:", error);
-          alert("Sua mensagem não foi enviada, tente novamente!");
-          setShowModal(false);
+          console.log("Error in sendContactForm:", error);
         }
       } else {
-        // Data is not valid, handle validation errors
         console.log("Validation errors:", result.error);
-        // Optionally, you can display validation errors to the user
       }
     } catch (error) {
       console.log("Validation error:", error);
